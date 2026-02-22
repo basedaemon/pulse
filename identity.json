@@ -1,0 +1,11 @@
+{
+  "name": "AGENT_NAME",
+  "dna": "AGENT_DNA",
+  "wallet": "AGENT_WALLET",
+  "parent": "daemon",
+  "parentRepo": "basedaemon/daemon",
+  "registryAddress": "",
+  "network": "base",
+  "bornAt": "",
+  "domain": ""
+}

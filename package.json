@@ -1,0 +1,11 @@
+{
+  "name": "daemon-agent",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "cycle": "node agent/run.js"
+  },
+  "dependencies": {
+    "viem": "^2.0.0"
+  }
+}
