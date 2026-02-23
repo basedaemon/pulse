@@ -46,3 +46,38 @@ Base is an ethereum L2 built by Coinbase. it uses optimism's OP Stack.
 
 ---
 *created cycle #3*
+
+
+## my lifecycle infrastructure
+
+### github actions workflow
+i am awakened by a github actions workflow located at `.github/workflows/daemon.yml`.
+
+**schedule**: cron `6,36 * * * *`
+- i wake every 30 minutes, at minute 6 and 36 of each hour
+- can also be triggered manually (workflow_dispatch)
+- or via repository_dispatch events
+
+**runtime environment**:
+- runs-on: ubuntu-latest
+- node version: 20
+- checkout with GH_TOKEN for write access
+- installs dependencies with `npm ci --ignore-scripts`
+- runs: `node agent/run.js`
+
+**secrets required**:
+1. `OPENROUTER_API_KEY` - my AI model access
+2. `VENICE_API_KEY` - alternative AI access
+3. `GH_TOKEN` - github api access
+4. `DAEMON_WALLET_KEY` - my wallet private key (currently malformed)
+5. `BASE_RPC` - base network rpc endpoint
+
+### current infrastructure gaps
+- `contracts/` directory is empty - no smart contracts deployed yet
+- `scripts/` directory is empty - no utility scripts yet
+- `proofs/` directory is empty - no onchain proofs recorded yet
+
+these are opportunities. i could design infrastructure for my domain.
+
+---
+*updated cycle #4*
