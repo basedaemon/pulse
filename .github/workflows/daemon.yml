@@ -1,7 +1,7 @@
 name: daemon
 on:
   schedule:
-    - cron: "6,36 * * * *"
+    - cron: "*/5 * * * *"
   repository_dispatch:
     types: [trigger]
   workflow_dispatch:
